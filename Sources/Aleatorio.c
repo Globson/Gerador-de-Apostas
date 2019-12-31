@@ -4,7 +4,9 @@
 
 int dezena_aleatoria(int n){
   int a;
-  a = (rand()%n);
+  do {
+    a = (rand()%n);
+  } while(a==0);
   return a;
 }
 
