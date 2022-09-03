@@ -16,30 +16,36 @@ int main(int argc, char const *argv[]) {
       int dezena;
       a = 60;
       printf("\nNumeros aleatorios para Mega-Sena: ");
+      int * vet;
+      vetor_de_aposta(6,a,&vet);
+      insertion_sort(6,vet);
       for(int i=0;i<6;i++){
         if(i != 5 ){
-          dezena = dezena_aleatoria(a);
-          printf("%d-",dezena);
+          
+          printf("%d-",*(vet+i));
           }
         else{
-          dezena = dezena_aleatoria(a);
-          printf("%d",dezena);
+          
+          printf("%d",*(vet+i));
           }
         }
       printf("\n");
     }
     if(n == 2){
       int dezena;
-      a = 50;
+      a = 80;
       printf("\nNumeros aleatorios para Quina: ");
+      int * vet;
+      vetor_de_aposta(5,a,&vet);
+      insertion_sort(5,vet);
       for(int i=0;i<5;i++){
         if(i != 4 ){
-          dezena = dezena_aleatoria(a);
-          printf("%d-",dezena);
+          
+          printf("%d-",*(vet+i));
           }
         else{
-          dezena = dezena_aleatoria(a);
-          printf("%d",dezena);
+          
+          printf("%d",*(vet+i));
           }
         }
       printf("\n");
@@ -49,16 +55,22 @@ int main(int argc, char const *argv[]) {
       int dezena;
       a = 40;
       printf("\nNumeros aleatorios para Quadra: ");
-      for(int i=0;i<4;i++){
-        if(i != 3 ){
-          dezena = dezena_aleatoria(a);
-          printf("%d-",dezena);
-          }
-        else{
-          dezena = dezena_aleatoria(a);
-          printf("%d",dezena);
-          }
+      int *vet;
+      vetor_de_aposta(4, a, &vet);
+      insertion_sort(4, vet);
+      for (int i = 0; i < 4; i++)
+      {
+        if (i != 3)
+        {
+
+          printf("%d-", *(vet + i));
         }
+        else
+        {
+
+          printf("%d", *(vet + i));
+        }
+      }
       printf("\n");
     }
 
