@@ -13,14 +13,23 @@ int main(int argc, char const *argv[]) {
         if(n != 1 && n != 2 && n != 3 && n != 4){
           printf("Opcao invalida!\n");}}
     if(n == 1){
-      int dezena;
+      int quantDez = 0;
+      while (quantDez != 6 && quantDez != 7 && quantDez != 8 && quantDez != 9 && quantDez != 10 && quantDez != 11 && quantDez != 12 && quantDez != 13 && quantDez != 14 && quantDez != 15)
+      {
+        printf("Entre com a quantidade de dezenas desejada:");
+        scanf("%d",&quantDez);
+        if (quantDez != 6 && quantDez != 7 && quantDez != 8 && quantDez != 9 && quantDez != 10 && quantDez != 11 && quantDez != 12 && quantDez != 13 && quantDez != 14 && quantDez != 15)
+        {
+          printf("Quantidade invalida!\n");
+        }
+      }
       a = 60;
       printf("\nNumeros aleatorios para Mega-Sena: ");
       int * vet;
-      vetor_de_aposta(6,a,&vet);
-      insertion_sort(6,vet);
-      for(int i=0;i<6;i++){
-        if(i != 5 ){
+      vetor_de_aposta(quantDez,a,&vet);
+      insertion_sort(quantDez,vet);
+      for(int i=0;i<quantDez;i++){
+        if(i != quantDez-1 ){
           
           printf("%d-",*(vet+i));
           }
@@ -29,7 +38,7 @@ int main(int argc, char const *argv[]) {
           printf("%d",*(vet+i));
           }
         }
-      printf("\n");
+      printf("\n\n");
     }
     if(n == 2){
       int dezena;
